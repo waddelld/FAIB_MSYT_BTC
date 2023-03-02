@@ -23,6 +23,8 @@ different-from-tipsy-4.5
 the-go-button
 btc-input-example
 btc-output
+general
+height
 btc-errors-warnings
 supplemental
 planting-delay

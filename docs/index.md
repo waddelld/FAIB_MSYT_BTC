@@ -1,7 +1,7 @@
 --- 
 title: "Introduction to Batch Tipsy Composer"
-author: "Dave Waddell, MF, RPF"
-date: "2023-03-01"
+author: "Dave Waddell, RPF, MF"
+date: "2023-03-02"
 site: bookdown::bookdown_site
 description: |
   This is the bookdown for Intro to BTC
@@ -236,20 +236,17 @@ The fourth section shows:
 
 These only apply to stands harvested prior to 1987.  
 
-## Different from Tipsy 4.5 
+# Different from Tipsy 4.5 
 
-Note that this format differs significantly from previous version of generic TIPSY.  It allows for:
+Tipsy in general allows for the blending of individual stand components.  An example would be a stand that has a 50/50 mix of Fir and spruce.  Tipsy will generate a pure Fir curve and a pure Spruce curve and then blend them together using a 50/50 mix.  
 
-- mixed conifer species
-- mixed conifer deciduous species
-- mixed planted and natural species (Controlled by planted_percent)
-- backgrow function for stands harvested prior to 1987
+BTC differs from previous versions of generic TIPSY.  It allows for:
+
+- simplified and more efficient method(s)  for initial stand inputs
+- blending planted and natural species (weighted/controlled by an input attribute)
 
 
-
-You might ask why we are referencing OAFs in the input when we were asked to tick some OAF boxes at the beginning.  I am asking those questions myself and waiting for an answer.
-
-## The GO Button
+# The GO Button
 
 ![](images/BTC_go_button.PNG)
 
@@ -257,7 +254,7 @@ Well BTC doesn't actually have button called go, but there is once called Start 
 
 ![](images/BTC_start_processing.PNG)
 
-## BTC Input Example
+# BTC Input Example
 
 Consider the following stand description:
 
@@ -274,7 +271,9 @@ Because the planted % = 100, BTC will ignore the natural component.
 Note that a species site index is required for each species in the valid species composition, otherwise an ERROR message. 
 
 
-## BTC output
+# BTC output
+
+## General
 
 ![](images/BTC_proc_issues.PNG)
 
@@ -296,6 +295,8 @@ Output is single row per identifier,  with:
 
 In a single row.   
 
+## Height
+
 Note about height.  
 
 Is the height output from Tipsy the average height?  
@@ -316,7 +317,7 @@ Switch from ht of pine * 0.7 + ht of aspen * 0.3  to just ht of pine.
 
 
 
-## BTC Errors & warnings
+# BTC Errors & warnings
 
 I have deleted one of the se_si values where Se is in the species composition.
 
@@ -356,10 +357,16 @@ There are warnings for:
 
 In theory, for the Provincial release, there should be no errors and the warnings have been examined and accounted for.  
 
+High site, the site index gets capped at the max allowed.  
+Reduced stems, means we’re using the max stems available in the database
 
-## Supplemental
+Low site if you get a warning, the species won’t be contributing any volume.
 
-### Planting Delay
+
+
+# Supplemental
+
+## Planting Delay
 
 Planting Delay is defined as the time lag between harvest and planting.
 
@@ -382,7 +389,7 @@ It should also be noted that the stock age across the province is 1. This comes 
 
 
 
-### Natural Stand Initiation
+## Natural Stand Initiation
 
 
 
