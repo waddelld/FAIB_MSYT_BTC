@@ -1,7 +1,7 @@
 --- 
 title: "Introduction to Batch Tipsy Composer"
 author: "Dave Waddell, MF, RPF"
-date: "2023-03-01"
+date: "2023-03-02"
 site: bookdown::bookdown_site
 description: |
   This is the bookdown for Intro to BTC
@@ -238,16 +238,15 @@ These only apply to stands harvested prior to 1987.
 
 ## Different from Tipsy 4.5 
 
-Note that this format differs significantly from previous version of generic TIPSY.  It allows for:
+Tipsy in general allows for the blending of individual stand components.  An example would be a stand that has a 50/50 mix of Fir and spruce.  Tipsy will generate a pure Fir curve and a pure Spruce curve and then blend them together using a 50/50 mix.  
 
-- mixed conifer species
-- mixed conifer deciduous species
-- mixed planted and natural species (Controlled by planted_percent)
+BTC differs significantly from previous versions of generic TIPSY.  It allows for:
+
+- blending conifer species
+- blending conifer and deciduous species
+- blending planted and natural species (Controlled by planted_percent)
 - backgrow function for stands harvested prior to 1987
 
-
-
-You might ask why we are referencing OAFs in the input when we were asked to tick some OAF boxes at the beginning.  I am asking those questions myself and waiting for an answer.
 
 ## The GO Button
 
