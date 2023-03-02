@@ -1,6 +1,6 @@
 --- 
 title: "Introduction to Batch Tipsy Composer"
-author: "Dave Waddell, MF, RPF"
+author: "Dave Waddell, RPF, MF"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 description: |
