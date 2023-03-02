@@ -1,6 +1,6 @@
 --- 
 title: "Introduction to Batch Tipsy Composer"
-author: "Dave Waddell, MF, RPF"
+author: "Dave Waddell, RPF, MF"
 date: "2023-03-02"
 site: bookdown::bookdown_site
 description: |
