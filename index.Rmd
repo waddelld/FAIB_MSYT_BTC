@@ -357,6 +357,12 @@ There are warnings for:
 
 In theory, for the Provincial release, there should be no errors and the warnings have been examined and accounted for.  
 
+High site, the site index gets capped at the max allowed.  
+Reduced stems, means we’re using the max stems available in the database
+
+Low site if you get a warning, the species won’t be contributing any volume.
+
+
 
 # Supplemental
 
