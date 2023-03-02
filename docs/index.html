@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Introduction to Batch Tipsy Composer</title>
+  <meta name="description" content="<p>This is the bookdown for Intro to BTC
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Introduction to Batch Tipsy Composer" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is the bookdown for Intro to BTC
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction to Batch Tipsy Composer" />
+  
+  <meta name="twitter:description" content="<p>This is the bookdown for Intro to BTC
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Dave Waddell, MF, RPF" />
+
+
+<meta name="date" content="2023-03-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">FAIB MSYT: BTC Training</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="#introduction"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="index.html"><a href="#btc-and-example-inputs"><i class="fa fa-check"></i><b>2</b> BTC and example inputs</a></li>
+<li class="chapter" data-level="3" data-path="index.html"><a href="#model-tab"><i class="fa fa-check"></i><b>3</b> Model Tab</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="index.html"><a href="#species"><i class="fa fa-check"></i><b>3.1</b> Species</a></li>
+<li class="chapter" data-level="3.2" data-path="index.html"><a href="#utilization"><i class="fa fa-check"></i><b>3.2</b> Utilization</a></li>
+<li class="chapter" data-level="3.3" data-path="index.html"><a href="#oafs"><i class="fa fa-check"></i><b>3.3</b> OAFs</a></li>
+<li class="chapter" data-level="3.4" data-path="index.html"><a href="#stock-height"><i class="fa fa-check"></i><b>3.4</b> Stock Height</a></li>
+<li class="chapter" data-level="3.5" data-path="index.html"><a href="#genetic-worth"><i class="fa fa-check"></i><b>3.5</b> Genetic Worth</a></li>
+<li class="chapter" data-level="3.6" data-path="index.html"><a href="#fertilization-response"><i class="fa fa-check"></i><b>3.6</b> Fertilization Response</a></li>
+<li class="chapter" data-level="3.7" data-path="index.html"><a href="#table-specifications"><i class="fa fa-check"></i><b>3.7</b> Table Specifications</a></li>
+<li class="chapter" data-level="3.8" data-path="index.html"><a href="#reports-graphs"><i class="fa fa-check"></i><b>3.8</b> Reports / Graphs</a></li>
+<li class="chapter" data-level="3.9" data-path="index.html"><a href="#settings"><i class="fa fa-check"></i><b>3.9</b> Settings</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="index.html"><a href="#input-tab"><i class="fa fa-check"></i><b>4</b> Input Tab</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="index.html"><a href="#overview-of-input"><i class="fa fa-check"></i><b>4.1</b> Overview of Input</a></li>
+<li class="chapter" data-level="4.2" data-path="index.html"><a href="#identifier-section"><i class="fa fa-check"></i><b>4.2</b> Identifier Section</a></li>
+<li class="chapter" data-level="4.3" data-path="index.html"><a href="#planted-composition"><i class="fa fa-check"></i><b>4.3</b> Planted Composition</a></li>
+<li class="chapter" data-level="4.4" data-path="index.html"><a href="#natural-composition"><i class="fa fa-check"></i><b>4.4</b> Natural Composition</a></li>
+<li class="chapter" data-level="4.5" data-path="index.html"><a href="#other-attribution"><i class="fa fa-check"></i><b>4.5</b> Other attribution</a></li>
+<li class="chapter" data-level="4.6" data-path="index.html"><a href="#different-from-tipsy-4.5"><i class="fa fa-check"></i><b>4.6</b> Different from Tipsy 4.5</a></li>
+<li class="chapter" data-level="4.7" data-path="index.html"><a href="#the-go-button"><i class="fa fa-check"></i><b>4.7</b> The GO Button</a></li>
+<li class="chapter" data-level="4.8" data-path="index.html"><a href="#btc-input-example"><i class="fa fa-check"></i><b>4.8</b> BTC Input Example</a></li>
+<li class="chapter" data-level="4.9" data-path="index.html"><a href="#btc-output"><i class="fa fa-check"></i><b>4.9</b> BTC output</a></li>
+<li class="chapter" data-level="4.10" data-path="index.html"><a href="#btc-errors-warnings"><i class="fa fa-check"></i><b>4.10</b> BTC Errors &amp; warnings</a></li>
+<li class="chapter" data-level="4.11" data-path="index.html"><a href="#supplemental"><i class="fa fa-check"></i><b>4.11</b> Supplemental</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Batch Tipsy Composer</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Introduction to Batch Tipsy Composer</h1>
+<p class="author"><em>Dave Waddell, MF, RPF</em></p>
+<p class="date"><em>2023-03-01</em></p>
+</div>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Section - 1</span> Introduction<a href="#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Batch Tipsy Composer (BTC) has been around since the first production runs of the MSYTs for TSR. It initially provided an efficient CSV interface that got around the strict and old school format specification for the batch version of Tipsy.</p>
+<p>While many of you are probably familiar with the Tipsy 4.4 and 4.5, BTC has a much different interface.</p>
+<p><img src="images/BTC_init_screen.PNG" /></p>
+<p>Please not that this is version 1.1.8.0 BETA, February 27, 2023.</p>
+<p>The intent is to have this product ready for general release sometime this spring.</p>
+<p>So for now, use wisely…..</p>
+</div>
+<div id="btc-and-example-inputs" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Section - 2</span> BTC and example inputs<a href="#btc-and-example-inputs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The BETA version of BTC is available here:</p>
+<p>G:/!Transfr/MSYT_Delivery/BatchTipsy</p>
+<p>Copy to your local drive c:/data/localapps</p>
+<ul>
+<li>BTC20230227.zip</li>
+</ul>
+<p>Unzip just the BTC component</p>
+<p>Also grab the sample data file</p>
+<ul>
+<li>MSYT_sample.csv</li>
+</ul>
+</div>
+<div id="model-tab" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Section - 3</span> Model Tab<a href="#model-tab" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The Model tab opens when BTC is instantiated and allows the user to specify a number of options. In general, the interface has been tailored for TSR use in terms of preset defaults, but it is always good practice to check and see what is turned on and what is turned off. It may surprise you and we don’t want that.</p>
+<div id="species" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Species<a href="#species" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ignore this for now. This is hard wired.<br />
+It simply lists the species codes that BTC recognizes.</p>
+<p>The Species that the MSYT process uses will dealt with in another session.</p>
+</div>
+<div id="utilization" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Utilization<a href="#utilization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The default show be set to TSR utilization specifications.</p>
+<p><img src="images/BTC_utilization.PNG" /></p>
+<p>The default should be: Everything 17.5 except Interior Pl and Coast Old Growth 12.5</p>
+<p>This can be interpreted as:</p>
+<ul>
+<li><p>Interior Pl: 12.5</p></li>
+<li><p>Interior Other Species: 17.5</p></li>
+<li><p>Coast: All species 12.5</p></li>
+<li><p>Deciduous Interior : 17.5</p></li>
+<li><p>Deciduous Coast: 12.5</p></li>
+</ul>
+<p><strong>THIS SECTION IS UNDER REVISION FOR CLARITY. </strong></p>
+</div>
+<div id="oafs" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> OAFs<a href="#oafs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>BTC has a variety of OAFs that are user selectable:</p>
+<p><img src="images/BTC_oafs.PNG" /></p>
+<p>In our case, we will be using the following:</p>
+<ul>
+<li>OAF1</li>
+<li>OAF2</li>
+<li>DR</li>
+<li>AT</li>
+</ul>
+<p>The other OAFs:</p>
+<ul>
+<li>AmV</li>
+<li>AmM</li>
+<li>DSG</li>
+<li>CSC</li>
+</ul>
+<p>require local information and are not normally used.</p>
+<p>We are using the OAFS provided for Alder (DR) and Aspen (AT). Note that in the volume output tables, you will notice the decline in deciduous volume.</p>
+<div id="dr-oaf" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> DR OAF<a href="#dr-oaf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/BTC_dr_oaf.PNG" /></p>
+</div>
+<div id="at-oaf" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> AT OAF<a href="#at-oaf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/BTC_at_oaf.PNG" /></p>
+<p><strong>THIS SECTION IS UNDER REVISION FOR CLARITY. </strong></p>
+</div>
+</div>
+<div id="stock-height" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Stock Height<a href="#stock-height" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>not used</p>
+</div>
+<div id="genetic-worth" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Genetic Worth<a href="#genetic-worth" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is overwritten by the 5 genetic worth columns in the input table.<br />
+(or at least it had better be)</p>
+</div>
+<div id="fertilization-response" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Fertilization Response<a href="#fertilization-response" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>not used</p>
+</div>
+<div id="table-specifications" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Table Specifications<a href="#table-specifications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>BTC tables are capped at age = 120. This was a group decision that included the Stand Development Modelling group, the YSM group and TSR folk.</p>
+<p>The default setting for BTC should be:</p>
+<p><img src="images/BTC_table_specs.PNG" /></p>
+<p>0-120:10|# MAX=120 INC=10</p>
+<p>So stands are capped at 120 years and the age increment is 10.</p>
+<p>Note that if input is selected to be TSR MSYT input format, then this is automattically the setting.</p>
+<p><strong>THIS SECTION IS UNDER REVISION FOR CLARITY. </strong></p>
+</div>
+<div id="reports-graphs" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Reports / Graphs<a href="#reports-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_reports.PNG" /></p>
+<p>This section details all the information that CAN be reported on.<br />
+For standardized MSYTs, only volumes and heights are reported by age.</p>
+</div>
+<div id="settings" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Settings<a href="#settings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ignore</p>
+</div>
+</div>
+<div id="input-tab" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Section - 4</span> Input Tab<a href="#input-tab" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The next main tab is the Input tab, This tab allows the user to select the type if format for the input tables. In the case of TSR, we use a very specific format that is represented in a CSV file.</p>
+<div id="overview-of-input" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Overview of Input<a href="#overview-of-input" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_inputs.PNG" /></p>
+<p>Once you have selected the TSR MSYT input format (csv) you may encounter 2 pop up boxes:</p>
+<p><img src="images/BTC_si_warning.PNG" /></p>
+<p><img src="images/BTC_nat_delay.PNG" /></p>
+<p>Click yes to both of these. We are sorting these out.</p>
+<p>There is no such thing as natural delay.</p>
+<p><img src="images/BTC_processing.PNG" /></p>
+<p>Once you have selected your input file the first few rows will appear. It is important to note that there are 4 main sections to each input row:</p>
+</div>
+<div id="identifier-section" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Identifier Section<a href="#identifier-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_input1.PNG" /></p>
+<p>The first section supplies the row identifier (in this case feature_id), as well as the BEC zone and subzone.<br />
+Note that BTC has a know list of BEC and if supplied with something unknown an ERROR will occur.</p>
+<p>The first column in the CSV is always the name of the identifier. Accepted values:</p>
+<ul>
+<li>feature_id</li>
+<li>opening_id</li>
+<li>id</li>
+</ul>
+</div>
+<div id="planted-composition" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Planted Composition<a href="#planted-composition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_input2.PNG" /></p>
+<p>The second section represents the planted component of the stand and shows:</p>
+<ul>
+<li>Planted Species (1-5)</li>
+<li>Planted Species Density (1-5)</li>
+<li>Genetic Worth by species (1-5)</li>
+<li>Planting Delay</li>
+<li>Percent Planted (0-100)</li>
+</ul>
+</div>
+<div id="natural-composition" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Natural Composition<a href="#natural-composition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_input3.PNG" /></p>
+<p>The third section represents the natural component of the stands and shows:</p>
+<ul>
+<li>Natural Species (1-5)</li>
+<li>Natural Species Density (1-5)</li>
+</ul>
+</div>
+<div id="other-attribution" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Other attribution<a href="#other-attribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_input4.PNG" /></p>
+<p>The fourth section shows:</p>
+<ul>
+<li><p>OAF1</p></li>
+<li><p>OAF2</p></li>
+<li><p>Opening_id (optional)</p></li>
+<li><p>vri reference age (for pre 1987 stands)</p></li>
+<li><p>vri ref density (for pre 1987 stands)</p></li>
+<li><p>Site Index values for all 22 PSPL species</p></li>
+</ul>
+<div id="special-identifiers" class="section level3 hasAnchor" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> special identifiers<a href="#special-identifiers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>vri reference age (for pre 1987 stands)</li>
+<li>vri ref density (for pre 1987 stands)</li>
+</ul>
+<p>These only apply to stands harvested prior to 1987.</p>
+</div>
+</div>
+<div id="different-from-tipsy-4.5" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Different from Tipsy 4.5<a href="#different-from-tipsy-4.5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Note that this format differs significantly from previous version of generic TIPSY. It allows for:</p>
+<ul>
+<li>mixed conifer species</li>
+<li>mixed conifer deciduous species</li>
+<li>mixed planted and natural species (Controlled by planted_percent)</li>
+<li>backgrow function for stands harvested prior to 1987</li>
+</ul>
+<p>You might ask why we are referencing OAFs in the input when we were asked to tick some OAF boxes at the beginning. I am asking those questions myself and waiting for an answer.</p>
+</div>
+<div id="the-go-button" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> The GO Button<a href="#the-go-button" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_go_button.PNG" /></p>
+<p>Well BTC doesn’t actually have button called go, but there is once called Start Processing.</p>
+<p><img src="images/BTC_start_processing.PNG" /></p>
+</div>
+<div id="btc-input-example" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> BTC Input Example<a href="#btc-input-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Consider the following stand description:</p>
+<p><img src="images/BTC_s1.PNG" />
+<img src="images/BTC_s2.PNG" />
+<img src="images/BTC_s3.PNG" /></p>
+<p>This shows a 100% planted stand, with the natural component all NULL.</p>
+<p>You can have a 100% planted stand with the natural component being NON NULL.<br />
+Because the planted % = 100, BTC will ignore the natural component.</p>
+<p>Note that a species site index is required for each species in the valid species composition, otherwise an ERROR message.</p>
+</div>
+<div id="btc-output" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> BTC output<a href="#btc-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_proc_issues.PNG" /></p>
+<p>Note at the bottom that it lists the Error File<br />
+with Warnings and Errors.</p>
+<p>In this case there were none.</p>
+<p><img src="images/BTC_out1.PNG" /></p>
+<p><img src="images/BTC_out2.PNG" /></p>
+<p>Output is single row per identifier, with:</p>
+<ul>
+<li>merch conifer volume (MVcon_) at age 0-120</li>
+<li>merch deciduous volume (MVdec_) at age 0-120</li>
+<li>conifer height (HTcon_) at age 0-120</li>
+<li>deciduous height (HTdec_) at age 0-120</li>
+</ul>
+<p>In a single row.</p>
+<p>Note about height.</p>
+<p>Is the height output from Tipsy the average height?</p>
+<p>The short answer is yes.</p>
+<p>Height is supposed to be the “top” 100 trees, predominant…<br />
+which used to be tallest and now is fattest?<br />
+Of course we don’t have individual trees in TIPSY.<br />
+One of the problem comes when we OAF the deciduous.</p>
+<p>But the graphs can be a bit strange now.</p>
+<p>Testing PLI 70% and AT 30%.<br />
+At 158yrs (DR happens at 70) the OAF=0 so the height suddenly goes away.<br />
+Switch from ht of pine * 0.7 + ht of aspen * 0.3 to just ht of pine.</p>
+</div>
+<div id="btc-errors-warnings" class="section level2 hasAnchor" number="4.10">
+<h2><span class="header-section-number">4.10</span> BTC Errors &amp; warnings<a href="#btc-errors-warnings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I have deleted one of the se_si values where Se is in the species composition.</p>
+<p><img src="images/BTC_error1.PNG" /></p>
+<p>And if we look at the error file:</p>
+<p>There are three lines documenting the error:</p>
+<pre><code>Error   2:48:11 No direct Site Index    
+The treatment unit &#39;Planted&#39; doesn&#39;t contain either;  
+an Age/Height pair, a User Site Index, or a Provincial Productivity Site Index
+
+Warning 2:48:11 Species Missing Provincial Site Productivity     
+This species Is missing a Provincial Site Productivity site index!  
+Se 
+
+Warning 2:48:11 Site Index for &#39;Poor&#39; Site Class    
+SI not entered, calculated from POOR Site class Se</code></pre>
+<p>The last message is warning us that BTC tried to find an alternative site index from poor site class for Se but couldn’t find one.</p>
+<p>It is best to provide everything that BTC needs and avoid going to default site index values.</p>
+<p>Changing one of the Se planted densities to 8000 gives these warnings:</p>
+<pre><code>Warning 3:02:27 Reduced Stems/ha    8,000 using max available of 4,444  Se
+Warning 3:02:27 Reduced Stems/ha    8,000 using max available of 4,444  Se</code></pre>
+<p>There are warnings for:</p>
+<ul>
+<li>site index too high</li>
+<li>site index too low</li>
+<li>exceeding maximum density for a species</li>
+<li>going below the minimum density for a species</li>
+</ul>
+<p>In theory, for the Provincial release, there should be no errors and the warnings have been examined and accounted for.</p>
+</div>
+<div id="supplemental" class="section level2 hasAnchor" number="4.11">
+<h2><span class="header-section-number">4.11</span> Supplemental<a href="#supplemental" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="planting-delay" class="section level3 hasAnchor" number="4.11.1">
+<h3><span class="header-section-number">4.11.1</span> Planting Delay<a href="#planting-delay" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Planting Delay is defined as the time lag between harvest and planting.</p>
+<p>RESULTS data provide both the harvest data and the planting date for an opening.</p>
+<p>In the case where there are multiple events of either type, the largest earliest is chosen.</p>
+<p>Planting Delay = Planting year - Harvest Year (for the opening)</p>
+<p>The age of the stock (generally assumed to be 1) is subtracted from the planting delay, but the planting delay is NOT allowed to go below zero.</p>
+<p>The planting delay is then used as an input to TIPSY where it has the effect of shifting the MSYT to the right along the x axis.</p>
+<p><img src="images/BTC_planting_delay.PNG" /></p>
+<p>It should be noted that the provincial average for the time between disturbance and planting is on the order of 18 months.</p>
+<p>It should also be noted that the stock age across the province is 1. This comes from Seed Planning and Registry (SPAR) sowing requests tabulated by Sabrina Donnelly RPB, 2021.</p>
+</div>
+<div id="natural-stand-initiation" class="section level3 hasAnchor" number="4.11.2">
+<h3><span class="header-section-number">4.11.2</span> Natural Stand Initiation<a href="#natural-stand-initiation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/BTC_natural_initiation.PNG" /></p>
+<ul>
+<li>distribution: poisson</li>
+<li>lambda: 3.2</li>
+<li>max: 9</li>
+<li>height vigour: off</li>
+</ul>
+<p>The max shown is 9, but this will depend on the initial density.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subssection",
+"scroll_highligt": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>
