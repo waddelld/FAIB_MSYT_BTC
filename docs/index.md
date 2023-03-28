@@ -1,7 +1,7 @@
 --- 
 title: "Introduction to Batch Tipsy Composer"
 author: "Dave Waddell, RPF, MF"
-date: "2023-03-02"
+date: "2023-03-28"
 site: bookdown::bookdown_site
 description: |
   This is the bookdown for Intro to BTC
@@ -19,9 +19,9 @@ Batch Tipsy Composer (BTC) has been around since the first production runs of th
 While many of you are probably familiar with the Tipsy 4.4 and 4.5, BTC has a much different interface.  
 
 
-![](images/BTC_init_screen.PNG)
+![](images/BTC_start.PNG)
 
-Please not that this is version 1.1.8.0 BETA, February 27, 2023.  
+Please note that this is version 1.1.9.4 BETA, March 14, 2023.  
 
 The intent is to have this product ready for general release sometime this spring.  
 
@@ -36,7 +36,7 @@ G:/!Transfr/MSYT_Delivery/BatchTipsy
 
 Copy to your local drive c:/data/localapps
 
-- BTC20230227.zip
+- BTC20230314.zip
 
 Unzip just the BTC component  
 
@@ -45,134 +45,23 @@ Also grab the sample data file
 - MSYT_sample.csv
 
 
-# Model Tab 
+# TSR Tab 
 
-The Model tab opens when BTC is instantiated and allows the user to specify a number of options.  In general, the interface has been tailored for TSR use in terms of preset defaults, but it is always good practice to check and see what is turned on and what is turned off.  It may surprise you and we don't want that. 
+The TSR tab is used to select TSR defaults for
 
+- utilization
+- OAFs
+- standardized outputs
 
+Clicking on the TSR TAB immediately takes you to select file:
 
-## Species
+![](images/BTC_select_input.PNG)
 
-Ignore this for now.  This is hard wired.  
-It simply lists the species codes that BTC recognizes.    
+You can then click on the Start Processing Button:
 
-The Species that the MSYT process uses will dealt with in another session.  
-
-## Utilization
-
-The default show be set to TSR utilization specifications.  
-
-![](images/BTC_utilization.PNG)
-
-The default should be: Everything 17.5 except Interior Pl and Coast Old Growth 12.5
-
-This can be interpreted as:
-
-- Interior Pl: 12.5
-- Interior Other Species: 17.5
-- Coast: All species 12.5
-
-- Deciduous Interior : 17.5
-- Deciduous Coast: 12.5
-
-**THIS SECTION IS UNDER REVISION FOR CLARITY. **
-
-## OAFs
-
-BTC has a variety of OAFs that are user selectable:
-
-![](images/BTC_oafs.PNG)
-
-In our case, we will be using the following:
-
-- OAF1
-- OAF2
-- DR
-- AT
-
-The other OAFs:
-
-- AmV
-- AmM
-- DSG
-- CSC
-
-require local information and are not normally used.  
-
-We are using the OAFS provided for Alder (DR) and Aspen (AT).  Note that in the volume output tables, you will notice the decline in deciduous volume.  
-
-### DR OAF
-
-![](images/BTC_dr_oaf.PNG)
-
-### AT OAF
-
-![](images/BTC_at_oaf.PNG)
-
-**THIS SECTION IS UNDER REVISION FOR CLARITY. **
-
-## Stock Height
-
-not used
-
-## Genetic Worth
-
-This is overwritten by the 5 genetic worth columns in the input table.  
-(or at least it had better be)
-
-## Fertilization Response
-
-not used
-
-## Table Specifications
-
-BTC tables are capped at age = 120.  This was a group decision that included the Stand Development Modelling group, the YSM group and TSR folk.  
-
-The default setting for BTC should be: 
-
-![](images/BTC_table_specs.PNG)
-
-0-120:10|# MAX=120 INC=10
-
-So stands are capped at 120 years and the age increment is 10.
-
-Note that if input is selected to be TSR MSYT input format, then this is automattically the setting.  
-
-**THIS SECTION IS UNDER REVISION FOR CLARITY. **
-
-## Reports / Graphs
-
-![](images/BTC_reports.PNG)
-
-This section details all the information that CAN be reported on.   
-For standardized MSYTs, only volumes and heights are reported by age.
-
-## Settings
-
-ignore
-
-# Input Tab
-
-The next main tab is the Input tab,  This tab allows the user to select the type if format for the input tables.  In the case of TSR, we use a very specific format that is represented in a CSV file.  
-
-## Overview of Input
-
-![](images/BTC_inputs.PNG)
-
-Once you have selected the TSR MSYT input format (csv) you may encounter 2 pop up boxes:
+![](images/BTC_start_processing.PNG)
 
 
-![](images/BTC_si_warning.PNG)
-
-![](images/BTC_nat_delay.PNG)
-
-Click yes to both of these.  We are sorting these out.  
-
-There is no such thing as natural delay. 
-
-
-
-![](images/BTC_processing.PNG)
 
 Once you have selected your input file the first few rows will appear.  It is important to note that there are 4 main sections to each input row:
 
@@ -246,13 +135,109 @@ BTC differs from previous versions of generic TIPSY.  It allows for:
 - blending planted and natural species (weighted/controlled by an input attribute)
 
 
-# The GO Button
 
-![](images/BTC_go_button.PNG)
+If you want to check on other features, click on the Model TAB:
 
-Well BTC doesn't actually have button called go, but there is once called Start Processing.
 
-![](images/BTC_start_processing.PNG)
+## Species
+
+Ignore this for now.  This is hard wired.  
+It simply lists the species codes that BTC recognizes.    
+
+The Species that the MSYT process uses will dealt with in another session.  
+
+## Utilization
+
+The default should be set to TSR utilization specifications.  
+
+![](images/BTC_utilization.PNG)
+
+The default should be: Coast 12.5 / Interior 17.5 except PLI 12.5
+
+This can be interpreted as:
+
+- Interior Pl: 12.5
+- Interior Other Species: 17.5
+- Coast: All species 12.5
+
+- Deciduous Interior : 17.5
+- Deciduous Coast: 12.5
+
+
+## OAFs
+
+BTC has a variety of OAFs that are user selectable:
+
+![](images/BTC_oafs.PNG)
+
+In our case, we will be using the following:
+
+- OAF1
+- OAF2
+- DR
+- AT
+
+The other OAFs:
+
+- AmV
+- AmM
+- DSG
+- CSC
+
+require local information and are not normally used.  
+
+We are using the OAFS provided for Alder (DR) and Aspen (AT).  Note that in the volume output tables, you will notice the decline in deciduous volume.  
+
+### DR OAF
+
+![](images/BTC_dr_oaf.PNG)
+
+### AT OAF
+
+![](images/BTC_at_oaf.PNG)
+
+
+## Stock Height
+
+not used
+
+## Genetic Worth
+
+This is overwritten by the 5 genetic worth columns in the input table.  
+(or at least it had better be)
+
+## Fertilization Response
+
+not used
+
+## Table Specifications
+
+BTC tables are capped at age = 120.  This was a group decision that included the Stand Development Modelling group, the YSM group and TSR folk.  
+
+The default setting for BTC should be: 
+
+![](images/BTC_table_specs.PNG)
+
+0-120:10|# MAX=200 INC=10  NOTE that this is wrong, they are capped at 120 for TSR.
+
+
+So stands are capped at 120 years and the age increment is 10.
+
+Note that if input is selected to be TSR MSYT input format, then this is automatically the setting.  
+
+
+
+## Reports / Graphs
+
+![](images/BTC_reports.PNG)
+
+This section details all the information that CAN be reported on.   
+For standardized MSYTs, only volumes and heights are reported by age.
+
+## Settings
+
+ignore
+
 
 # BTC Input Example
 
